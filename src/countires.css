@@ -1,0 +1,22 @@
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .country-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .country-container {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+}
+
+.visited {
+  background-color: #d3f9d8; /* Light pastel green */
+}
