@@ -1,0 +1,116 @@
+/* General Styling */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.teal-theme {
+  color: #004d40;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #00796b;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #00695c;
+}
+
+/* Sorting Visualizer */
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #e0f2f1;
+  border-radius: 5px;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.array-bar {
+  width: 30px;
+  background-color: #26a69a;
+  margin: 0 5px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Controls */
+.controls,
+.traversal-controls {
+  margin-top: 20px;
+}
+
+.controls select,
+button,
+.tree-input {
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #004d40;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls select {
+  background-color: #00796b;
+}
+
+button:hover,
+.controls select:hover {
+  background-color: #00695c;
+}
+
+/* Tree Traversal */
+.steps-container {
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.step-text {
+  font-size: 16px;
+  color: #004d40;
+  text-align: left;
+}
+
+.traversal-result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Input Styling */
+.tree-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #004d40;
+}

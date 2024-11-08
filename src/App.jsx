@@ -1,13 +1,13 @@
-import "./App.css";
-import Countries from "./countries";
+import React from "react";
+import Complexity from "./Complexity";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>React World Tour</h1>
-      <Countries />
-    </>
+    <div>
+      <h1>Welcome to the Algorithm Visualizer</h1>
+      <Complexity />
+    </div>
   );
-}
+};
 
 export default App;
