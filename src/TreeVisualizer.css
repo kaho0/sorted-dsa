@@ -1,0 +1,108 @@
+/* Container for the whole tree visualizer */
+
+.tree-visualizer {
+  color: #004d4d;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Ensures proper spacing between sections */
+}
+
+/* Header styling */
+h1,
+h3 {
+  color: #00796b;
+  text-align: center;
+}
+
+/* Styling for input field */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #004d4d;
+  border-radius: 4px;
+  width: 60%;
+  margin-right: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 8px 16px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #004d4d;
+}
+
+/* Styling for the result section */
+.result {
+  background-color: #b2dfdb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Styling for sorting steps */
+.sorting-steps {
+  margin-top: 20px;
+  background: #e0f2f1; /* Light teal background */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  color: #004d4d;
+}
+
+.sorting-steps p {
+  text-align: left;
+}
+
+/* Styling for the given tree display */
+.given-tree {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #00796b;
+  text-align: center;
+}
+
+/* Apply square bullet points for steps in result */
+.result ul {
+  list-style-type: square;
+}
+
+.result li {
+  margin: 5px 0;
+  color: #004d4d;
+  font-weight: 500;
+}
+
+/* Ensuring all sections have some spacing */
+button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+/* Adding a bit of responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .tree-visualizer {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  input[type="text"] {
+    width: 80%; /* Increase input field width on small screens */
+  }
+}

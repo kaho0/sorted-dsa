@@ -1,116 +1,246 @@
-/* General Styling */
+/* General styling for the entire page */
 .app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "Poppins", sans-serif;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.text-center {
   text-align: center;
+  margin: 0 auto;
 }
 
-.teal-theme {
-  color: #004d40;
-}
-
-/* Main Title */
-.main-title {
-  font-size: 36px;
+/* Title styling */
+.title {
+  font-size: 2em;
   margin-bottom: 20px;
-  font-weight: 700;
   color: #00796b;
 }
 
-/* Section Titles */
-.section-title {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #00695c;
+/* Center the sorting section and content */
+.sorting-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 30px auto;
+  color: #004d4d;
+  gap: 20px;
 }
 
-/* Sorting Visualizer */
+/* Array container for the bars */
 .array-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 20px auto;
-  padding: 10px;
-  background-color: #e0f2f1;
-  border-radius: 5px;
-  max-width: 600px;
-  overflow: hidden;
+  height: 250px;
+  margin: 30px 0;
+  padding: 20px;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .array-bar {
   width: 30px;
-  background-color: #26a69a;
   margin: 0 5px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-/* Controls */
-.controls,
-.traversal-controls {
-  margin-top: 20px;
-}
-
-.controls select,
-button,
-.tree-input {
-  padding: 10px;
-  margin: 10px 5px;
-  border-radius: 5px;
-  border: none;
-  background-color: #004d40;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.controls select {
   background-color: #00796b;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  padding-top: 5px;
+  border-radius: 5px;
+  transition: height 0.3s ease-out;
 }
 
-button:hover,
-.controls select:hover {
-  background-color: #00695c;
-}
-
-/* Tree Traversal */
-.steps-container {
-  background-color: #e0f7fa;
-  padding: 15px;
-  border-radius: 8px;
+/* Center the buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  max-height: 200px;
-  overflow-y: auto;
 }
 
-.step-text {
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
   font-size: 16px;
-  color: #004d40;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #004d4d;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #b2dfdb;
+  cursor: not-allowed;
+}
+
+/* Styling for the select dropdown */
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styling for the sorting steps (aligned with tree result section) */
+.sorting-steps {
+  margin-top: 20px;
+  background: #e0f2f1; /* Light teal background */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  color: #004d4d; /* Dark teal text */
+}
+
+.sorting-steps p {
   text-align: left;
 }
 
-.traversal-result {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 15px;
+.sorting-steps ul {
+  list-style-type: square;
 }
 
-/* Input Styling */
-.tree-input {
-  width: 100%;
-  max-width: 400px;
-  margin: 15px auto;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #004d40;
+.sorting-steps li {
+  margin: 5px 0;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+  color: #004d4d;
+}
+
+.sorting-steps ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #00796b;
+  border-radius: 50%;
+}
+
+.sorting-steps ul ul {
+  padding-left: 30px;
+}
+
+.sorting-steps ul li::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  height: 100%;
+  width: 1px;
+  background-color: #00796b;
+  transform: translateX(-50%);
+}
+
+/* Apply square bullet points for steps in result */
+.result ul {
+  list-style-type: square;
+  padding-left: 20px; /* Add some padding to the left for indentation */
+}
+
+.result li {
+  margin: 5px 0;
+  color: #004d4d;
+  font-weight: 500;
+}
+
+/* Container for the whole tree visualizer */
+
+/* Header styling */
+h1,
+h3 {
+  color: #00796b;
+  text-align: center;
+}
+
+/* Styling for input field */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #004d4d;
+  border-radius: 4px;
+  width: 60%;
+  margin-right: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 8px 16px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #004d4d;
+}
+
+/* Styling for the result section */
+.result {
+  background-color: #b2dfdb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  text-align: left; /* Align text to the left */
+  color: #004d4d; /* Ensure proper text color */
+}
+
+/* Styling for sorting steps */
+.sorting-steps {
+  margin-top: 20px;
+  background-color: #e0f2f1; /* Light teal background */
+  padding: 15px; /* Added more padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  font-family: "Courier New", monospace;
+  color: #004d4d;
+  text-align: left; /* Align text to the left */
+}
+
+.sorting-steps p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+/* Custom bullet points for sorting steps */
+.sorting-steps ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #00796b; /* Green color for bullet points */
+  border-radius: 50%;
+}
+
+/* Ensuring all sections have some spacing */
+button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .tree-visualizer {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  input[type="text"] {
+    width: 80%; /* Increase input field width on small screens */
+  }
 }
